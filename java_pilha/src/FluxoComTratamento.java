@@ -1,14 +1,14 @@
-public class Fluxo {
+public class FluxoComTratamento {
 
     public static void main(String[] args) {
 
         System.out.println("Inicio do Main");
         try {
             metodo1();
-        } catch (ArithmeticException | NullPointerException e) {
-            String msg = e.getMessage();
+        } catch (ArithmeticException | NullPointerException ex) {
+            String msg = ex.getMessage();
             System.out.println("Exception: " + msg);
-            e.printStackTrace();
+            ex.printStackTrace();
         }
         System.out.println("Fim do Main");
     }
@@ -21,12 +21,12 @@ public class Fluxo {
 
     private static void metodo2() {
         System.out.println("Inicio do metodo 2");
-        for (int i = 1; i <= 5; i++) {
-            System.out.println(i);
-            Conta c = null;
-            c.deposita();
-        }
+
+        ArithmeticException exception = new ArithmeticException();
+
         System.out.println("Fim do metodo 2");
+        throw exception;
+
     }
 
 }
