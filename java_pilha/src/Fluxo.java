@@ -23,7 +23,7 @@ public class Fluxo {
         System.out.println("Inicio do metodo 2");
         for (int i = 1; i <= 5; i++) {
             System.out.println(i);
-            Conta c = null;
+            Conta c = new Conta();
             c.deposita();
         }
         System.out.println("Fim do metodo 2");

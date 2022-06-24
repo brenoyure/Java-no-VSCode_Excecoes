@@ -22,10 +22,10 @@ public class FluxoComTratamento {
     private static void metodo2() {
         System.out.println("Inicio do metodo 2");
 
-        ArithmeticException exception = new ArithmeticException();
+        throw new ArithmeticException("Mensagem de Erro");
+        
 
-        System.out.println("Fim do metodo 2");
-        throw exception;
+        //System.out.println("Fim do metodo 2");
 
     }
 
