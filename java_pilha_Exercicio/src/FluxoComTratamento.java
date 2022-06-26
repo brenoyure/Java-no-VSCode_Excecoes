@@ -5,10 +5,9 @@ public class FluxoComTratamento {
         System.out.println("Inicio do Main");
         try {
             metodo1();
-        } catch (ArithmeticException | NullPointerException e) {
-            String msg = e.getMessage();
-            System.out.println("Exception: " + msg);
-            e.printStackTrace();
+        } catch (ArithmeticException | NullPointerException exception) {
+            System.out.println("Mensagem da Exceção: " + exception.getMessage());
+            exception.printStackTrace();
         }
         System.out.println("Fim do Main");
     }
@@ -21,14 +20,10 @@ public class FluxoComTratamento {
 
     private static void metodo2() {
         System.out.println("Inicio do metodo 2");
+        
+        throw new ArithmeticException("teste - jogando exceção do tipo Arithmetic...");
 
-        throw new ArithmeticException("deu errado.");
-
-        /*
-         * Código (abaixo) inalcansável, por causa do lançamento da exceção.
-         * System.out.println("Fim do metodo 2");
-         */
-
+        // System.out.println("Fim do metodo 2");
     }
 
 }
